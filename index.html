@@ -40,7 +40,8 @@
         }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }details > summary {
+        }
+        details > summary {
             list-style: none;
         }
         details > summary::-webkit-details-marker {
@@ -58,17 +59,40 @@
                         </div>
                         <span class="text-xl font-bold tracking-tight text-text-main dark:text-white">Auxiplus</span>
                     </div>
-                    <nav class="hidden md:flex items-center gap-8">
-                        <a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#servicios">Servicios</a>
-                        <a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#nosotros">Nosotros</a>
-                        <a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#testimonios">Testimonios</a>
+                    <nav class="hidden lg:flex items-center gap-6">
+                        <div class="relative group">
+                            <a class="flex items-center gap-1 text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white cursor-pointer">
+                                Servicios
+                                <span class="material-symbols-outlined text-sm">expand_more</span>
+                            </a>
+                            <div class="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-[#18171b] shadow-lg rounded-xl border border-gray-100 dark:border-gray-800 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                <a class="block px-4 py-2 text-sm text-text-muted hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg" href="#">Cuidado de Mayores</a>
+                                <a class="block px-4 py-2 text-sm text-text-muted hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg" href="#">Acompañamiento Hospitalario</a>
+                                <a class="block px-4 py-2 text-sm text-text-muted hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg" href="#">Ayuda a Domicilio</a>
+                                <a class="block px-4 py-2 text-sm font-semibold text-primary bg-primary/5 rounded-lg" href="#">Asistencia Urgente 24h</a>
+                            </div>
+                        </div>
+                        <a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#">Calculadora de Precios</a>
+                        <a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#">Cobertura</a>
+                        <div class="relative group">
+                            <a class="flex items-center gap-1 text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white cursor-pointer">
+                                Blog
+                                <span class="material-symbols-outlined text-sm">expand_more</span>
+                            </a>
+                            <div class="absolute top-full left-0 mt-2 w-56 bg-white dark:bg-[#18171b] shadow-lg rounded-xl border border-gray-100 dark:border-gray-800 p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                <a class="block px-4 py-2 text-sm text-text-muted hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg" href="#">Cuidados</a>
+                                <a class="block px-4 py-2 text-sm text-text-muted hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg" href="#">Dependencia</a>
+                                <a class="block px-4 py-2 text-sm text-text-muted hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg" href="#">Recursos</a>
+                                <a class="block px-4 py-2 text-sm text-text-muted hover:text-primary hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg" href="#">Mujeres supervivientes</a>
+                            </div>
+                        </div>
                         <a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#faq">Preguntas</a>
                     </nav>
                     <div class="flex items-center gap-4">
                         <a class="hidden sm:flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-primary/90 focus:ring-4 focus:ring-primary/20" href="#contacto">
                             Solicitar Info
                         </a>
-                        <button class="flex md:hidden items-center justify-center p-2 text-gray-600 dark:text-gray-300">
+                        <button class="flex lg:hidden items-center justify-center p-2 text-gray-600 dark:text-gray-300">
                             <span class="material-symbols-outlined">menu</span>
                         </button>
                     </div>
@@ -81,22 +105,30 @@
                             <div class="flex flex-col gap-6 text-left">
                                 <div class="inline-flex w-fit items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary dark:bg-primary/20 dark:text-white">
                                     <span class="mr-1 h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-                                    Disponible en Córdoba y Andalucía
+                                    Servicio de Urgencia 24h Disponible
                                 </div>
                                 <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-text-main dark:text-white sm:text-5xl md:text-6xl">
                                     Cuidado humano y profesional
                                     <span class="text-primary">en tu propio hogar</span>
                                 </h1>
                                 <p class="text-lg text-text-muted dark:text-gray-300 max-w-lg leading-relaxed">
-                                    Servicios de asistencia a domicilio personalizados. Garantizamos la tranquilidad de tu familia con cuidadores certificados y de confianza.
+                                    Servicios de asistencia a domicilio personalizados en Córdoba y Andalucía. Calcula tu presupuesto al instante o consulta nuestra cobertura.
                                 </p>
                                 <div class="flex flex-wrap gap-4 mt-2">
                                     <button class="flex items-center justify-center rounded-lg bg-primary h-12 px-6 text-base font-bold text-white transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25">
-                                        Solicitar Presupuesto
+                                        Calculadora de Precios
                                     </button>
                                     <button class="flex items-center justify-center rounded-lg bg-white border border-gray-200 h-12 px-6 text-base font-bold text-text-main transition-all hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700">
                                         Ver Servicios
                                     </button>
+                                </div>
+                                <div class="flex flex-wrap gap-2 text-xs font-medium text-text-muted mt-2">
+                                    <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 rounded dark:bg-gray-800 text-primary">
+                                        <span class="material-symbols-outlined text-sm">check</span> Mayores</span>
+                                    <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 rounded dark:bg-gray-800 text-primary">
+                                        <span class="material-symbols-outlined text-sm">check</span> Dependencia</span>
+                                    <span class="flex items-center gap-1 px-2 py-1 bg-gray-100 rounded dark:bg-gray-800 text-primary">
+                                        <span class="material-symbols-outlined text-sm">check</span> Acompañamiento</span>
                                 </div>
                                 <div class="flex items-center gap-4 pt-4 text-sm text-text-muted dark:text-gray-400">
                                     <div class="flex -space-x-3">
@@ -123,41 +155,43 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="absolute top-6 right-6 z-20">
+                                    <a class="flex items-center gap-2 bg-red-500/90 text-white backdrop-blur px-4 py-2 rounded-lg shadow-lg hover:bg-red-600 transition-colors" href="#">
+                                        <span class="material-symbols-outlined animate-pulse">emergency</span>
+                                        <span class="font-bold text-sm">Urgencias 24h</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="border-y border-gray-100 bg-white dark:bg-[#18171b] dark:border-gray-800">
-                    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-                        <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
-                            <div class="flex flex-col gap-1 text-center md:text-left">
-                                <div class="mb-2 text-primary">
-                                    <span class="material-symbols-outlined text-4xl">diversity_1</span>
+                <section class="border-y border-gray-100 bg-white dark:bg-[#18171b] dark:border-gray-800 py-8">
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <a class="group flex flex-col items-center gap-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-900 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors border border-transparent hover:border-primary/20" href="#">
+                                <div class="p-3 bg-white dark:bg-gray-800 rounded-full shadow-sm text-primary group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined">calculate</span>
                                 </div>
-                                <p class="text-3xl font-black tracking-tight text-text-main dark:text-white">500+</p>
-                                <p class="text-sm font-medium text-text-muted dark:text-gray-400">Familias Ayudadas</p>
-                            </div>
-                            <div class="flex flex-col gap-1 text-center md:text-left">
-                                <div class="mb-2 text-primary">
-                                    <span class="material-symbols-outlined text-4xl">history</span>
+                                <span class="text-sm font-bold text-text-main dark:text-white text-center">Calculadora de Precios</span>
+                            </a>
+                            <a class="group flex flex-col items-center gap-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-900 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors border border-transparent hover:border-primary/20" href="#">
+                                <div class="p-3 bg-white dark:bg-gray-800 rounded-full shadow-sm text-primary group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined">map</span>
                                 </div>
-                                <p class="text-3xl font-black tracking-tight text-text-main dark:text-white">10+</p>
-                                <p class="text-sm font-medium text-text-muted dark:text-gray-400">Años de Experiencia</p>
-                            </div>
-                            <div class="flex flex-col gap-1 text-center md:text-left">
-                                <div class="mb-2 text-primary">
-                                    <span class="material-symbols-outlined text-4xl">workspace_premium</span>
+                                <span class="text-sm font-bold text-text-main dark:text-white text-center">Zonas de Cobertura</span>
+                            </a>
+                            <a class="group flex flex-col items-center gap-2 p-4 rounded-xl bg-gray-50 dark:bg-gray-900 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors border border-transparent hover:border-primary/20" href="#">
+                                <div class="p-3 bg-white dark:bg-gray-800 rounded-full shadow-sm text-primary group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined">article</span>
                                 </div>
-                                <p class="text-3xl font-black tracking-tight text-text-main dark:text-white">100%</p>
-                                <p class="text-sm font-medium text-text-muted dark:text-gray-400">Cuidadores Certificados</p>
-                            </div>
-                            <div class="flex flex-col gap-1 text-center md:text-left">
-                                <div class="mb-2 text-primary">
-                                    <span class="material-symbols-outlined text-4xl">schedule</span>
+                                <span class="text-sm font-bold text-text-main dark:text-white text-center">Blog &amp; Recursos</span>
+                            </a>
+                            <a class="group flex flex-col items-center gap-2 p-4 rounded-xl bg-red-50 dark:bg-red-900/10 hover:bg-red-100 dark:hover:bg-red-900/20 transition-colors border border-transparent hover:border-red-200" href="#">
+                                <div class="p-3 bg-white dark:bg-gray-800 rounded-full shadow-sm text-red-500 group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined">ambulance</span>
                                 </div>
-                                <p class="text-3xl font-black tracking-tight text-text-main dark:text-white">24/7</p>
-                                <p class="text-sm font-medium text-text-muted dark:text-gray-400">Atención Telefónica</p>
-                            </div>
+                                <span class="text-sm font-bold text-red-600 dark:text-red-400 text-center">Asistencia Urgente</span>
+                            </a>
                         </div>
                     </div>
                 </section>
@@ -176,52 +210,60 @@
                                     Ver todos los servicios
                                     <span class="material-symbols-outlined text-sm">arrow_forward</span>
                                 </a>
+                                <div class="mt-4 p-4 bg-primary/5 rounded-xl border border-primary/10">
+                                    <h4 class="font-bold text-primary mb-2 flex items-center gap-2">
+                                        <span class="material-symbols-outlined">calculate</span>
+                                        ¿Cuánto costará?
+                                    </h4>
+                                    <p class="text-sm text-text-muted mb-3">Obtén un presupuesto aproximado en segundos con nuestra herramienta online.</p>
+                                    <a class="text-sm font-semibold underline text-primary hover:text-secondary" href="#">Ir a la Calculadora →</a>
+                                </div>
                             </div>
                             <div class="grid flex-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
-                                <div class="group flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-gray-800">
+                                <a class="group flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-gray-800 border-2 border-transparent hover:border-primary/20" href="#">
                                     <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                                         <span class="material-symbols-outlined">elderly</span>
                                     </div>
                                     <div>
-                                        <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white">Cuidado de Mayores</h3>
+                                        <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Cuidado de Mayores</h3>
                                         <p class="text-sm leading-relaxed text-text-muted dark:text-gray-400">
-                                            Atención personalizada 24/7, higiene personal, control de medicación y compañía afectuosa para mejorar su calidad de vida.
+                                            Atención personalizada 24/7, higiene personal, control de medicación y compañía afectuosa.
                                         </p>
                                     </div>
-                                </div>
-                                <div class="group flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-gray-800">
+                                </a>
+                                <a class="group flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-gray-800 border-2 border-transparent hover:border-primary/20" href="#">
                                     <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                                         <span class="material-symbols-outlined">medical_services</span>
                                     </div>
                                     <div>
-                                        <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white">Acompañamiento Hospitalario</h3>
+                                        <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Acompañamiento Hospitalario</h3>
                                         <p class="text-sm leading-relaxed text-text-muted dark:text-gray-400">
-                                            Asistencia profesional durante ingresos hospitalarios o visitas médicas. Nunca estarán solos cuando más lo necesitan.
+                                            Asistencia profesional durante ingresos hospitalarios o visitas médicas. Nunca estarán solos.
                                         </p>
                                     </div>
-                                </div>
-                                <div class="group flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-gray-800">
+                                </a>
+                                <a class="group flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-gray-800 border-2 border-transparent hover:border-primary/20" href="#">
                                     <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                                         <span class="material-symbols-outlined">house</span>
                                     </div>
                                     <div>
-                                        <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white">Ayuda a Domicilio</h3>
+                                        <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white group-hover:text-primary transition-colors">Ayuda a Domicilio</h3>
                                         <p class="text-sm leading-relaxed text-text-muted dark:text-gray-400">
-                                            Apoyo en tareas domésticas, limpieza, plancha y compras para facilitar el día a día y mantener un hogar ordenado.
+                                            Apoyo en tareas domésticas, limpieza, plancha y compras para facilitar el día a día.
                                         </p>
                                     </div>
-                                </div>
-                                <div class="group flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-gray-800">
-                                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
-                                        <span class="material-symbols-outlined">psychology</span>
+                                </a>
+                                <a class="group flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-gray-800 border-2 border-transparent hover:border-red-200" href="#">
+                                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-red-100 text-red-600 transition-colors group-hover:bg-red-600 group-hover:text-white">
+                                        <span class="material-symbols-outlined">ambulance</span>
                                     </div>
                                     <div>
-                                        <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white">Estimulación Cognitiva</h3>
+                                        <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white group-hover:text-red-600 transition-colors">Asistencia Urgente 24h</h3>
                                         <p class="text-sm leading-relaxed text-text-muted dark:text-gray-400">
-                                            Ejercicios y actividades adaptadas para mantener las capacidades mentales activas y retrasar el deterioro cognitivo.
+                                            Respuesta inmediata ante cualquier eventualidad. Cuidadores disponibles en menos de 2h.
                                         </p>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -299,14 +341,14 @@
                         </div>
                     </div>
                 </section>
-                <section class="py-20 bg-white dark:bg-[#18171b]" id="testimonios">
+                <section class="py-20 bg-background-light dark:bg-[#131316]" id="testimonios">
                     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div class="mb-12 text-center">
                             <span class="mb-2 block text-sm font-bold uppercase tracking-wider text-primary">Testimonios</span>
                             <h2 class="text-3xl font-bold text-text-main dark:text-white md:text-4xl">Lo que dicen las familias</h2>
                         </div>
                         <div class="grid gap-8 md:grid-cols-3">
-                            <div class="relative flex flex-col rounded-2xl border border-gray-100 bg-background-light p-8 dark:border-gray-800 dark:bg-gray-900">
+                            <div class="relative flex flex-col rounded-2xl border border-gray-100 bg-white p-8 dark:border-gray-800 dark:bg-gray-900 shadow-sm">
                                 <span class="material-symbols-outlined absolute right-8 top-8 text-6xl text-primary/10">format_quote</span>
                                 <div class="mb-6 flex gap-1 text-yellow-400">
                                     <span class="material-symbols-outlined text-xl">star</span>
@@ -326,7 +368,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="relative flex flex-col rounded-2xl border border-gray-100 bg-background-light p-8 dark:border-gray-800 dark:bg-gray-900">
+                            <div class="relative flex flex-col rounded-2xl border border-gray-100 bg-white p-8 dark:border-gray-800 dark:bg-gray-900 shadow-sm">
                                 <span class="material-symbols-outlined absolute right-8 top-8 text-6xl text-primary/10">format_quote</span>
                                 <div class="mb-6 flex gap-1 text-yellow-400">
                                     <span class="material-symbols-outlined text-xl">star</span>
@@ -346,7 +388,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="relative flex flex-col rounded-2xl border border-gray-100 bg-background-light p-8 dark:border-gray-800 dark:bg-gray-900">
+                            <div class="relative flex flex-col rounded-2xl border border-gray-100 bg-white p-8 dark:border-gray-800 dark:bg-gray-900 shadow-sm">
                                 <span class="material-symbols-outlined absolute right-8 top-8 text-6xl text-primary/10">format_quote</span>
                                 <div class="mb-6 flex gap-1 text-yellow-400">
                                     <span class="material-symbols-outlined text-xl">star</span>
@@ -369,7 +411,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="py-20 bg-background-light dark:bg-[#131316]" id="faq">
+                <section class="py-20 bg-white dark:bg-[#18171b]" id="faq">
                     <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
                         <div class="mb-12 text-center">
                             <span class="mb-2 block text-sm font-bold uppercase tracking-wider text-primary">Dudas Frecuentes</span>
@@ -379,7 +421,7 @@
                             </p>
                         </div>
                         <div class="flex flex-col gap-4">
-                            <details class="group rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
+                            <details class="group rounded-xl bg-background-light dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
                                 <summary class="flex cursor-pointer list-none items-center justify-between p-6 font-semibold text-text-main dark:text-white">
                                     <span>¿Cómo seleccionáis a los cuidadores?</span>
                                     <span class="transition group-open:rotate-180">
@@ -390,7 +432,7 @@
                                     Nuestro proceso de selección es riguroso y exhaustivo. Verificamos referencias laborales, titulaciones oficiales y certificados de antecedentes penales. Además, realizamos entrevistas personales y tests psicológicos para asegurar la máxima confianza y profesionalidad.
                                 </div>
                             </details>
-                            <details class="group rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
+                            <details class="group rounded-xl bg-background-light dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
                                 <summary class="flex cursor-pointer list-none items-center justify-between p-6 font-semibold text-text-main dark:text-white">
                                     <span>¿Qué pasa si el cuidador no encaja con mi familiar?</span>
                                     <span class="transition group-open:rotate-180">
@@ -401,7 +443,7 @@
                                     Entendemos que la conexión personal es fundamental. Si por cualquier motivo no hay sintonía entre el cuidador y el usuario, gestionamos una sustitución de forma inmediata y gratuita hasta encontrar a la persona ideal para vuestra familia.
                                 </div>
                             </details>
-                            <details class="group rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
+                            <details class="group rounded-xl bg-background-light dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
                                 <summary class="flex cursor-pointer list-none items-center justify-between p-6 font-semibold text-text-main dark:text-white">
                                     <span>¿Ofrecéis servicios los fines de semana y festivos?</span>
                                     <span class="transition group-open:rotate-180">
@@ -412,7 +454,7 @@
                                     Sí, nuestros servicios están disponibles los 365 días del año. Nos adaptamos a vuestros horarios, ofreciendo cobertura en fines de semana, festivos e incluso turnos nocturnos si es necesario.
                                 </div>
                             </details>
-                            <details class="group rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
+                            <details class="group rounded-xl bg-background-light dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
                                 <summary class="flex cursor-pointer list-none items-center justify-between p-6 font-semibold text-text-main dark:text-white">
                                     <span>¿Puedo contratar servicios puntuales o debe ser mensual?</span>
                                     <span class="transition group-open:rotate-180">
@@ -423,7 +465,7 @@
                                     Nos adaptamos a vuestras necesidades. Ofrecemos tanto servicios continuados mensuales como asistencias puntuales por horas, acompañamientos específicos al médico o sustituciones temporales. No exigimos permanencia mínima obligatoria.
                                 </div>
                             </details>
-                            <details class="group rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
+                            <details class="group rounded-xl bg-background-light dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
                                 <summary class="flex cursor-pointer list-none items-center justify-between p-6 font-semibold text-text-main dark:text-white">
                                     <span>¿Ayudáis con los trámites de la Ley de Dependencia?</span>
                                     <span class="transition group-open:rotate-180">
@@ -497,36 +539,36 @@
                             </div>
                         </div>
                         <div>
-                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Empresa</h3>
+                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Explora</h3>
                             <ul class="flex flex-col gap-3">
                                 <li>
-                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Sobre Nosotros</a>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Calculadora de Precios</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Nuestro Equipo</a>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Cobertura en Andalucía</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Trabaja con Nosotros</a>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Blog y Recursos</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Blog</a>
+                                    <a class="text-sm text-red-500 hover:text-red-600 font-semibold" href="#">Asistencia Urgente 24h</a>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Servicios</h3>
+                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Blog</h3>
                             <ul class="flex flex-col gap-3">
                                 <li>
-                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Cuidado de Mayores</a>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Cuidados</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Ayuda a Domicilio</a>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Dependencia</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Acompañamiento</a>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Recursos</a>
                                 </li>
                                 <li>
-                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Limpieza del Hogar</a>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Mujeres supervivientes</a>
                                 </li>
                             </ul>
                         </div>
@@ -554,7 +596,7 @@
                     </div>
                     <div class="mt-12 border-t border-gray-100 pt-8 dark:border-gray-800">
                         <p class="text-center text-xs text-text-muted dark:text-gray-500">
-                            © 2026 Auxiplus Asistencia a Domicilio. Todos los derechos reservados.
+                            © 2024 Auxiplus Asistencia a Domicilio. Todos los derechos reservados.
                         </p>
                     </div>
                 </div>
