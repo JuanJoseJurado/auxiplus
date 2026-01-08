@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Auxiplus - Asistencia a Domicilio</title>
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6b5b95",
+                        "secondary": "#887bb0",
+                        "background-light": "#fcfbfc",
+                        "background-dark": "#18171b",
+                        "text-main": "#141315",
+                        "text-muted": "#736f7b",
+                    },
+                    fontFamily: {
+                        "display": ["Poppins", "Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+        </script>
+        <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        </style>
+    </head>
+    <body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white antialiased">
+        <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+            <header class="sticky top-0 z-50 w-full border-b border-[#f2f2f3] bg-white/95 backdrop-blur-sm dark:bg-[#18171b]/95 dark:border-gray-800">
+                <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center gap-3">
+                        <div class="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined text-3xl">medical_services</span>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight text-text-main dark:text-white">Auxiplus</span>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#servicios">Servicios</a>
+                        <a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#nosotros">Nosotros</a>
+                        <a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#testimonios">Testimonios</a>
+                        <a class="text-sm font-medium text-text-main hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-white" href="#faq">Preguntas</a>
+                    </nav>
+                    <div class="flex items-center gap-4">
+                        <a class="hidden sm:flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white transition-all hover:bg-primary/90 focus:ring-4 focus:ring-primary/20" href="#contacto">
+                            Solicitar Info
+                        </a>
+                        <button class="flex md:hidden items-center justify-center p-2 text-gray-600 dark:text-gray-300">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-1">
+                <section class="relative overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24">
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                        <div class="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+                            <div class="flex flex-col gap-6 text-left">
+                                <div class="inline-flex w-fit items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary dark:bg-primary/20 dark:text-white">
+                                    <span class="mr-1 h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                                    Disponible en Córdoba y Andalucía
+                                </div>
+                                <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-text-main dark:text-white sm:text-5xl md:text-6xl">
+                                    Cuidado humano y profesional
+                                    <span class="text-primary">en tu propio hogar</span>
+                                </h1>
+                                <p class="text-lg text-text-muted dark:text-gray-300 max-w-lg leading-relaxed">
+                                    Servicios de asistencia a domicilio personalizados. Garantizamos la tranquilidad de tu familia con cuidadores certificados y de confianza.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mt-2">
+                                    <button class="flex items-center justify-center rounded-lg bg-primary h-12 px-6 text-base font-bold text-white transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/25">
+                                        Solicitar Presupuesto
+                                    </button>
+                                    <button class="flex items-center justify-center rounded-lg bg-white border border-gray-200 h-12 px-6 text-base font-bold text-text-main transition-all hover:bg-gray-50 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700">
+                                        Ver Servicios
+                                    </button>
+                                </div>
+                                <div class="flex items-center gap-4 pt-4 text-sm text-text-muted dark:text-gray-400">
+                                    <div class="flex -space-x-3">
+                                        <div class="h-10 w-10 rounded-full bg-gray-200 border-2 border-white dark:border-gray-800 bg-cover bg-center" data-alt="portrait of a happy female client" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCeN3cymhEK2XVjrk8VQsBtNbBr-XaSPjuqgaiM1u9pXVTJBjZGiwDI7urTXLZsxv1sGNpazU3jStwsO_gQBn8MtcGy5QP0QCEa7r3mK18Q6HaK79imRJbJLEnGnU-_SFBOS4k4njvFiRyqg-zCOwcPk057u0Pa1tqTusKCPZoBHE448mn2e6GJHDtoQmeVge5gGQIkTW5aMcD4201SS5mQ4Mu6reHHjEIAcd8yvlvJznfN6DZagBj9DCADl_LoqNqXnnCTd_lz28Q");'></div>
+                                        <div class="h-10 w-10 rounded-full bg-gray-200 border-2 border-white dark:border-gray-800 bg-cover bg-center" data-alt="portrait of a happy male client" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDB7HFu3OA6jCbMUD-cUP-Q3gY8N4iOxmM24154FrJZIWDtum4EFu9rZabzqoUBd-tlQr8f5wLPr7Cofu1bIy8wadBQixWCfafmxw3nL2vYX4WTESS7qjIJ31x3QERUBHpgQHwUL4QQvTIxkehmnzsMAcwjt5DJ0WtKTypdNe1BHgCchED40sTbH9_inq358z3xJYS84X4yx58fJUhqlY7plpAavtEmDDq3XqX-qmmaYDMWYYGPSFV0ak_XEeRct37Qj3_sPWn-Cvw");'></div>
+                                        <div class="h-10 w-10 rounded-full bg-gray-200 border-2 border-white dark:border-gray-800 bg-cover bg-center" data-alt="portrait of another happy client" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBM4qeSSho-_yqvKC2owZA9YyKZa3aQNH9sJYUSSPkNtTOiZ-M-lmpAfxi7TUCQFKPHl4gMk-8gE5cG_WqFV8J-VuwUqctqdo-uvASZi11QRui9J06MjAxffJhZkEI6MT7iJJbb__TU0WuvAjPpmtQrpllktfnnlf0LgyQpHxbytqv73LLNnPQr9d7ApKjqY2NPxDivnBSQp8l_cGgJQ9lRjqbKbSNqIVU4sJlCVJza2FIa-JRU0BlC1yrPePpxSz_56-G23Z312u8");'></div>
+                                    </div>
+                                    <p>
+                                        Más de
+                                        <span class="font-bold text-text-main dark:text-white">500 familias</span>
+                                        confían en nosotros
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="relative w-full aspect-square lg:aspect-auto lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+                                <div class="h-full w-full bg-cover bg-center transition-transform hover:scale-105 duration-700" data-alt="Caregiver smiling while helping an elderly woman in her living room, warm and sunny atmosphere" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCvaiz3tQ6v9B4Ba9mE6Amu83baz6A92QsFzXKK3LL9KV6JLWMH9fHVcRwWUirm2YYkQAVW3sAnL2I2caQ77sz-orbHXRRnOeLoM3eo9Z8kswYdGIZkPLWWtuT8Q7K4KcU_DMGIyOK-lJ1YYzvEcE-RDIyWC6wvswA8ydfdofguFx414Tbg84zUYo1mqwdun-TxnmVLP-Ozf0tAP3AdcNDEiGDPUOZWVCMQi4L9bo8amzimt21u8gT182P2wInq0aTyCGbK6PvZ8NA");'></div>
+                                <div class="absolute bottom-6 left-6 z-20 bg-white/95 dark:bg-gray-900/95 backdrop-blur px-5 py-4 rounded-xl shadow-lg border border-white/20">
+                                    <div class="flex items-center gap-3">
+                                        <span class="material-symbols-outlined text-yellow-500 text-3xl">verified</span>
+                                        <div>
+                                            <p class="text-sm font-bold text-text-main dark:text-white">Personal Certificado</p>
+                                            <p class="text-xs text-text-muted dark:text-gray-400">100% Verificado</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="border-y border-gray-100 bg-white dark:bg-[#18171b] dark:border-gray-800">
+                    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+                            <div class="flex flex-col gap-1 text-center md:text-left">
+                                <div class="mb-2 text-primary">
+                                    <span class="material-symbols-outlined text-4xl">diversity_1</span>
+                                </div>
+                                <p class="text-3xl font-black tracking-tight text-text-main dark:text-white">500+</p>
+                                <p class="text-sm font-medium text-text-muted dark:text-gray-400">Familias Ayudadas</p>
+                            </div>
+                            <div class="flex flex-col gap-1 text-center md:text-left">
+                                <div class="mb-2 text-primary">
+                                    <span class="material-symbols-outlined text-4xl">history</span>
+                                </div>
+                                <p class="text-3xl font-black tracking-tight text-text-main dark:text-white">10+</p>
+                                <p class="text-sm font-medium text-text-muted dark:text-gray-400">Años de Experiencia</p>
+                            </div>
+                            <div class="flex flex-col gap-1 text-center md:text-left">
+                                <div class="mb-2 text-primary">
+                                    <span class="material-symbols-outlined text-4xl">workspace_premium</span>
+                                </div>
+                                <p class="text-3xl font-black tracking-tight text-text-main dark:text-white">100%</p>
+                                <p class="text-sm font-medium text-text-muted dark:text-gray-400">Cuidadores Certificados</p>
+                            </div>
+                            <div class="flex flex-col gap-1 text-center md:text-left">
+                                <div class="mb-2 text-primary">
+                                    <span class="material-symbols-outlined text-4xl">schedule</span>
+                                </div>
+                                <p class="text-3xl font-black tracking-tight text-text-main dark:text-white">24/7</p>
+                                <p class="text-sm font-medium text-text-muted dark:text-gray-400">Atención Telefónica</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="bg-[#f7f6f7] py-20 dark:bg-[#131316]" id="servicios">
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                        <div class="flex flex-col gap-12 lg:flex-row lg:gap-16">
+                            <div class="flex flex-col gap-6 lg:w-1/3">
+                                <span class="text-sm font-bold uppercase tracking-wider text-primary">Nuestros Servicios</span>
+                                <h2 class="text-3xl font-bold leading-tight text-text-main dark:text-white sm:text-4xl">
+                                    Asistencia integral para tus seres queridos
+                                </h2>
+                                <p class="text-base text-text-muted dark:text-gray-300">
+                                    Ofrecemos un abanico de servicios personalizados para garantizar el bienestar y la seguridad en el hogar. Nos adaptamos a las necesidades específicas de cada familia en Córdoba y Andalucía.
+                                </p>
+                                <a class="inline-flex items-center gap-2 font-bold text-primary hover:text-primary/80" href="#">
+                                    Ver todos los servicios
+                                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                            <div class="grid flex-1 gap-6 sm:grid-cols-2 lg:grid-cols-2">
+                                <div class="group flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-gray-800">
+                                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                                        <span class="material-symbols-outlined">elderly</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white">Cuidado de Mayores</h3>
+                                        <p class="text-sm leading-relaxed text-text-muted dark:text-gray-400">
+                                            Atención personalizada 24/7, higiene personal, control de medicación y compañía afectuosa para mejorar su calidad de vida.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="group flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-gray-800">
+                                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                                        <span class="material-symbols-outlined">medical_services</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white">Acompañamiento Hospitalario</h3>
+                                        <p class="text-sm leading-relaxed text-text-muted dark:text-gray-400">
+                                            Asistencia profesional durante ingresos hospitalarios o visitas médicas. Nunca estarán solos cuando más lo necesitan.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="group flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-gray-800">
+                                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                                        <span class="material-symbols-outlined">house</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white">Ayuda a Domicilio</h3>
+                                        <p class="text-sm leading-relaxed text-text-muted dark:text-gray-400">
+                                            Apoyo en tareas domésticas, limpieza, plancha y compras para facilitar el día a día y mantener un hogar ordenado.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="group flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-gray-800">
+                                    <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                                        <span class="material-symbols-outlined">psychology</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="mb-2 text-lg font-bold text-text-main dark:text-white">Estimulación Cognitiva</h3>
+                                        <p class="text-sm leading-relaxed text-text-muted dark:text-gray-400">
+                                            Ejercicios y actividades adaptadas para mantener las capacidades mentales activas y retrasar el deterioro cognitivo.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Why Choose Us Section -->
+                <section class="py-16 md:py-24 bg-background-light dark:bg-background-dark border-y border-gray-200 dark:border-gray-800 relative overflow-hidden" id="nosotros">
+                    <!-- Decorative circle -->
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                    <div class="px-4 md:px-10 lg:px-40 flex justify-center relative z-10">
+                        <div class="max-w-[1200px] flex-1">
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                                <!-- Content -->
+                                <div class="flex flex-col gap-8">
+                                    <div>
+                                        <h2 class="text-3xl md:text-4xl font-bold text-text-main dark:text-white mb-4">Por qué las familias eligen Auxiplus</h2>
+                                        <p class="text-text-muted dark:text-gray-400 text-lg">
+                                            Entendemos que dejar a un ser querido en manos de otros es una decisión difícil. Por eso, nos basamos en tres pilares fundamentales:
+                                        </p>
+                                    </div>
+                                    <div class="flex flex-col gap-6">
+                                        <!-- Feature 1 -->
+                                        <div class="flex gap-4">
+                                            <div class="shrink-0 size-12 rounded-full bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center text-primary border border-gray-100 dark:border-gray-700">
+                                                <span class="material-symbols-outlined">diversity_1</span>
+                                            </div>
+                                            <div>
+                                                <h3 class="text-lg font-bold text-text-main dark:text-white mb-1">Enfoque Humano y Cercano</h3>
+                                                <p class="text-text-muted dark:text-gray-400 text-sm">Tratamos a cada persona como si fuera de nuestra propia familia, con respeto y dignidad.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Feature 2 -->
+                                        <div class="flex gap-4">
+                                            <div class="shrink-0 size-12 rounded-full bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center text-primary border border-gray-100 dark:border-gray-700">
+                                                <span class="material-symbols-outlined">badge</span>
+                                            </div>
+                                            <div>
+                                                <h3 class="text-lg font-bold text-text-main dark:text-white mb-1">Personal Cualificado</h3>
+                                                <p class="text-text-muted dark:text-gray-400 text-sm">Riguroso proceso de selección para asegurar la máxima profesionalidad y experiencia.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Feature 3 -->
+                                        <div class="flex gap-4">
+                                            <div class="shrink-0 size-12 rounded-full bg-white dark:bg-gray-800 shadow-sm flex items-center justify-center text-primary border border-gray-100 dark:border-gray-700">
+                                                <span class="material-symbols-outlined">timelapse</span>
+                                            </div>
+                                            <div>
+                                                <h3 class="text-lg font-bold text-text-main dark:text-white mb-1">Flexibilidad Total</h3>
+                                                <p class="text-text-muted dark:text-gray-400 text-sm">Servicios por horas, días sueltos, fines de semana o internos. Nos adaptamos a ti.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Visual Grid -->
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="space-y-4 translate-y-8">
+                                        <div class="aspect-square rounded-2xl bg-gray-200 overflow-hidden shadow-lg">
+                                            <div class="w-full h-full bg-cover bg-center" data-alt="Close up of holding hands for comfort" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuACdoHkAkwlXBdxQ8hEz2JowVnyjiaLsHJ60aYyNDzyDuTQlSjfDYBHTcl_xYNRQLUEDBpkHCtENQ2ibN0iP1eo52ITSPmmpvBg6FuhwOfrf-nfVkZBm5jdEl3JDwKuRWgH4rSdJkGlyRfr7V37nDCGIxZS4Cwu8t5GHlXHx92xIjybG0XascuVj5Jdv_VRnlq8_7wyGQaIPnj97PtKDDBFgYknGJzTS6He_k_ky7MpM4aArr7hJJ88axG6yWeDRUJ54nKz6riIy2Y");'></div>
+                                        </div>
+                                        <div class="p-6 bg-primary text-white rounded-2xl shadow-lg flex flex-col justify-center items-center text-center">
+                                            <span class="text-4xl font-bold mb-1">98%</span>
+                                            <span class="text-sm opacity-90">Clientes Satisfechos</span>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-4">
+                                        <div class="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 flex flex-col justify-center items-center text-center h-40">
+                                            <span class="material-symbols-outlined text-4xl text-primary mb-2">stars</span>
+                                            <span class="text-sm font-semibold text-text-main dark:text-white">Servicio Premium</span>
+                                        </div>
+                                        <div class="aspect-square rounded-2xl bg-gray-200 overflow-hidden shadow-lg">
+                                            <div class="w-full h-full bg-cover bg-center" data-alt="Senior woman smiling looking out window" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDMlQbjRoqM6ptPMDE15HJ0xmmWPnesj0opVCJU1IUiecR7wzrzGjYv8hRroyZWUPI6lTJFBR2CHxVXGmxRfNnmmm8VTbeBjL0q0Y2TathhRWQZOZrwBM3tMbi4zusvg_Lzi1xKhW0x0v1Wm2QJ78i5kxI_rVHiKNtFo-wheHLw68YX_KRCPupY9nCuM7Vi4MZBQar0dAVvnuHpDhXUOBpaZVR1plh8TaVNhS-wa0lNZuOGaKb67P9KFPhdEclBcPsVwAs85qGPDwY");'></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-20 bg-white dark:bg-[#18171b]" id="testimonios">
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                        <div class="mb-12 text-center">
+                            <span class="mb-2 block text-sm font-bold uppercase tracking-wider text-primary">Testimonios</span>
+                            <h2 class="text-3xl font-bold text-text-main dark:text-white md:text-4xl">Lo que dicen las familias</h2>
+                        </div>
+                        <div class="grid gap-8 md:grid-cols-3">
+                            <div class="relative flex flex-col rounded-2xl border border-gray-100 bg-background-light p-8 dark:border-gray-800 dark:bg-gray-900">
+                                <span class="material-symbols-outlined absolute right-8 top-8 text-6xl text-primary/10">format_quote</span>
+                                <div class="mb-6 flex gap-1 text-yellow-400">
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                </div>
+                                <p class="mb-6 flex-1 text-base italic leading-relaxed text-text-muted dark:text-gray-300">
+                                    "Contratar a Auxiplus ha sido la mejor decisión para el cuidado de mi madre. La cuidadora es un ángel, muy profesional y cariñosa. Ahora vamos a trabajar tranquilos sabiendo que está en buenas manos."
+                                </p>
+                                <div class="flex items-center gap-3">
+                                    <div class="h-10 w-10 rounded-full bg-gray-300 bg-cover bg-center" data-alt="Portrait of Maria G." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxKcca2ZwG-DdH-SEjSk3ptdRA27ZHszEjF-1BLXFzgmjIY0a9WcuTqswBzTTX3MrBtV7n-xw_QThHtXb-uaACdsNk4xj-LAIxOj8EhULDIQJz6QqoZFN_35j6IfoJh8yHGlz7DTHaBO1LRWWGrrRiAFDfinMXkHkeLqDJn0gXI7oeIxOT9HlfgactDk34Ls9cAlUOAQv_9_2IisWJhJ_2J97JvaaDWyS1sZMb0dTqkDxjJDGWkYZWrvFdSVhYDEp3BtZDN64t_gU");'></div>
+                                    <div>
+                                        <p class="font-bold text-text-main dark:text-white">María González</p>
+                                        <p class="text-xs text-text-muted">Córdoba</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative flex flex-col rounded-2xl border border-gray-100 bg-background-light p-8 dark:border-gray-800 dark:bg-gray-900">
+                                <span class="material-symbols-outlined absolute right-8 top-8 text-6xl text-primary/10">format_quote</span>
+                                <div class="mb-6 flex gap-1 text-yellow-400">
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                </div>
+                                <p class="mb-6 flex-1 text-base italic leading-relaxed text-text-muted dark:text-gray-300">
+                                    "La rapidez con la que gestionaron el acompañamiento hospitalario para mi padre fue increíble. Un servicio humano y eficiente en momentos difíciles."
+                                </p>
+                                <div class="flex items-center gap-3">
+                                    <div class="h-10 w-10 rounded-full bg-gray-300 bg-cover bg-center" data-alt="Portrait of Antonio R." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAaDLiBcObIwPDVkEoTvULmndMCtGnWv74Oiamyyws8i7tymfJ14apohIp7CkX4GWOm-ZaIT1vuMS4Nto44zBoU0LBs--oh9ddp82orDjLqWtRzpDWqeZ-Cx9r57JWb3aRp72UmKH-QrdmHRv8g1w5FbV5WF1WUjzkxsDmn-IJYqASyYWDyBOWAjBwo8VQSmZZwCfMM9WitgVLEBlBp8bWzyojUm-dflGpvxl13cCFbNnao4mLSg4I4Yf0Z2K-Sn910gH2jR8gLsIo");'></div>
+                                    <div>
+                                        <p class="font-bold text-text-main dark:text-white">Antonio Ruiz</p>
+                                        <p class="text-xs text-text-muted">Sevilla</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative flex flex-col rounded-2xl border border-gray-100 bg-background-light p-8 dark:border-gray-800 dark:bg-gray-900">
+                                <span class="material-symbols-outlined absolute right-8 top-8 text-6xl text-primary/10">format_quote</span>
+                                <div class="mb-6 flex gap-1 text-yellow-400">
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                    <span class="material-symbols-outlined text-xl">star</span>
+                                </div>
+                                <p class="mb-6 flex-1 text-base italic leading-relaxed text-text-muted dark:text-gray-300">
+                                    "Gracias a su ayuda a domicilio, mis padres pueden seguir viviendo en su casa con total seguridad. Recomiendo Auxiplus al 100% por su cercanía."
+                                </p>
+                                <div class="flex items-center gap-3">
+                                    <div class="h-10 w-10 rounded-full bg-gray-300 bg-cover bg-center" data-alt="Portrait of Laura M." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBqy1ZkFMsGVWFfCZEZgsyT5oezPIAXSa4sYYlqvIjZkJTx54C7G9Z8fQFNjens5oILo8AJkZ1vXrGrckFS9zToG7hmwHFwkVEEgLrDzp3r-_0t45CZwNaoXFstCBeLEYuo4esnOKhDPhxnohcd5feJvoqIIA6FKrqyyOJG0CkgnLGuzQF4RinJYZd2fMF-YfrDuBBeC0tJL6FNhI1VWH49BAcFnbO3e4QJpMt4ZZBFbrnSB2j_YDnzbfQaxj-s8eGdZcZ_jS9TeIA");'></div>
+                                    <div>
+                                        <p class="font-bold text-text-main dark:text-white">Laura Martín</p>
+                                        <p class="text-xs text-text-muted">Málaga</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-20 bg-background-light dark:bg-[#131316]" id="faq">
+                    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+                        <div class="mb-12 text-center">
+                            <span class="mb-2 block text-sm font-bold uppercase tracking-wider text-primary">Dudas Frecuentes</span>
+                            <h2 class="text-3xl font-bold text-text-main dark:text-white md:text-4xl">¿Tienes preguntas?</h2>
+                            <p class="mt-4 text-base text-text-muted dark:text-gray-400 max-w-2xl mx-auto">
+                                Resolvemos las consultas más habituales de las familias sobre nuestros servicios de cuidado y asistencia.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <details class="group rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
+                                <summary class="flex cursor-pointer list-none items-center justify-between p-6 font-semibold text-text-main dark:text-white">
+                                    <span>¿Cómo seleccionáis a los cuidadores?</span>
+                                    <span class="transition group-open:rotate-180">
+                                        <span class="material-symbols-outlined text-primary">keyboard_arrow_down</span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-6 text-sm text-text-muted dark:text-gray-300 leading-relaxed">
+                                    Nuestro proceso de selección es riguroso y exhaustivo. Verificamos referencias laborales, titulaciones oficiales y certificados de antecedentes penales. Además, realizamos entrevistas personales y tests psicológicos para asegurar la máxima confianza y profesionalidad.
+                                </div>
+                            </details>
+                            <details class="group rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
+                                <summary class="flex cursor-pointer list-none items-center justify-between p-6 font-semibold text-text-main dark:text-white">
+                                    <span>¿Qué pasa si el cuidador no encaja con mi familiar?</span>
+                                    <span class="transition group-open:rotate-180">
+                                        <span class="material-symbols-outlined text-primary">keyboard_arrow_down</span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-6 text-sm text-text-muted dark:text-gray-300 leading-relaxed">
+                                    Entendemos que la conexión personal es fundamental. Si por cualquier motivo no hay sintonía entre el cuidador y el usuario, gestionamos una sustitución de forma inmediata y gratuita hasta encontrar a la persona ideal para vuestra familia.
+                                </div>
+                            </details>
+                            <details class="group rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
+                                <summary class="flex cursor-pointer list-none items-center justify-between p-6 font-semibold text-text-main dark:text-white">
+                                    <span>¿Ofrecéis servicios los fines de semana y festivos?</span>
+                                    <span class="transition group-open:rotate-180">
+                                        <span class="material-symbols-outlined text-primary">keyboard_arrow_down</span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-6 text-sm text-text-muted dark:text-gray-300 leading-relaxed">
+                                    Sí, nuestros servicios están disponibles los 365 días del año. Nos adaptamos a vuestros horarios, ofreciendo cobertura en fines de semana, festivos e incluso turnos nocturnos si es necesario.
+                                </div>
+                            </details>
+                            <details class="group rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
+                                <summary class="flex cursor-pointer list-none items-center justify-between p-6 font-semibold text-text-main dark:text-white">
+                                    <span>¿Puedo contratar servicios puntuales o debe ser mensual?</span>
+                                    <span class="transition group-open:rotate-180">
+                                        <span class="material-symbols-outlined text-primary">keyboard_arrow_down</span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-6 text-sm text-text-muted dark:text-gray-300 leading-relaxed">
+                                    Nos adaptamos a vuestras necesidades. Ofrecemos tanto servicios continuados mensuales como asistencias puntuales por horas, acompañamientos específicos al médico o sustituciones temporales. No exigimos permanencia mínima obligatoria.
+                                </div>
+                            </details>
+                            <details class="group rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 shadow-sm open:shadow-md transition-all duration-300">
+                                <summary class="flex cursor-pointer list-none items-center justify-between p-6 font-semibold text-text-main dark:text-white">
+                                    <span>¿Ayudáis con los trámites de la Ley de Dependencia?</span>
+                                    <span class="transition group-open:rotate-180">
+                                        <span class="material-symbols-outlined text-primary">keyboard_arrow_down</span>
+                                    </span>
+                                </summary>
+                                <div class="px-6 pb-6 text-sm text-text-muted dark:text-gray-300 leading-relaxed">
+                                    Por supuesto. Nuestro departamento de trabajo social os asesorará gratuitamente sobre las ayudas disponibles, como el Cheque Servicio o la Ley de Dependencia, y os guiaremos en la gestión de la documentación necesaria.
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </section>
+                <section class="relative isolate overflow-hidden bg-primary py-16 sm:py-24 lg:py-32">
+                    <div class="absolute inset-0 -z-10 h-full w-full bg-primary opacity-90"></div>
+                    <div class="absolute inset-0 -z-20 h-full w-full bg-cover bg-fixed bg-center mix-blend-multiply opacity-40 grayscale" data-alt="Close up of holding hands between young and old person" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAE78i3e6Ehj3QEubwrAWQrOmv3wVwUK-Rx8c9EsqerZXXkfWLEqsMuHKZ6UPDs8wGnTcz0OxXaIfrYbqfBJvmq714SQHccT9fOby16LmINBwVyz8wE59rb6hdy0BJhX2CxSTmVv58_6qM1pA8WtV3maNhwoeMXbYsiC7LLscVWX3gQUI8cEZCbVcPsirXrOu0-AFqWpvNM1csj7yLzEBt9T1URuRlUGS4k394ymvLgj9YsnGKa59bxg_d5kg5ykKdcM7g4bJIOejA");'></div>
+                    <div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+                        <h2 class="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                            ¿Necesitas ayuda con el cuidado de tus seres queridos?
+                        </h2>
+                        <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-200">
+                            Contáctanos hoy mismo para una valoración gratuita. Encontramos al cuidador ideal para tu familia en menos de 24 horas.
+                        </p>
+                        <div class="mt-10 flex items-center justify-center gap-x-6">
+                            <a class="rounded-lg bg-white px-8 py-3.5 text-base font-bold text-primary shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" href="#contacto">
+                                Solicitar Información
+                            </a>
+                            <a class="flex items-center gap-2 text-sm font-semibold leading-6 text-white hover:text-gray-200" href="tel:+34900000000">
+                                <span class="material-symbols-outlined">call</span>
+                                Llamar ahora
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="bg-white border-t border-gray-200 pt-16 pb-8 dark:bg-[#18171b] dark:border-gray-800" id="contacto">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-2 text-primary">
+                                <span class="material-symbols-outlined text-3xl">medical_services</span>
+                                <span class="text-xl font-bold text-text-main dark:text-white">Auxiplus</span>
+                            </div>
+                            <p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                                Comprometidos con el bienestar de las familias en Andalucía. Cuidamos de los tuyos como si fueran los nuestros.
+                            </p>
+                            <div class="flex gap-4 pt-2">
+                                <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white" href="#">
+                                    <span class="sr-only">Facebook</span>
+                                    <svg
+                                        aria-hidden="true"
+                                        class="h-6 w-6"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white" href="#">
+                                    <span class="sr-only">Instagram</span>
+                                    <svg
+                                        aria-hidden="true"
+                                        class="h-6 w-6"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.373c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Empresa</h3>
+                            <ul class="flex flex-col gap-3">
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Sobre Nosotros</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Nuestro Equipo</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Trabaja con Nosotros</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Servicios</h3>
+                            <ul class="flex flex-col gap-3">
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Cuidado de Mayores</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Ayuda a Domicilio</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Acompañamiento</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="#">Limpieza del Hogar</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Contacto</h3>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+                                    <span class="text-sm text-text-muted dark:text-gray-400">
+                                        Av. Gran Capitán 23, 14008
+                                        <br>
+                                        Córdoba, España
+                                    </span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">call</span>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="tel:+34900000000">+34 900 000 000</a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="mailto:info@auxiplus.com">info@auxiplus.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-12 border-t border-gray-100 pt-8 dark:border-gray-800">
+                        <p class="text-center text-xs text-text-muted dark:text-gray-500">
+                            © 2026 Auxiplus Asistencia a Domicilio. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
