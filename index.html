@@ -549,6 +549,60 @@
                         </div>
                     </div>
                 </section>
+                <section class="relative py-20 bg-primary text-white overflow-hidden">
+                    <!-- Fondo decorativo -->
+                    <div class="absolute inset-0 opacity-10" aria-hidden="true" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
+                    <div class="relative z-10 max-w-6xl mx-auto px-4">
+                        <!-- Texto -->
+                        <div class="text-center mb-12">
+                            <span class="material-symbols-outlined text-5xl mb-4 text-white/80">map</span>
+                            <h2 class="text-3xl sm:text-4xl font-black mb-4">
+                                Nuestra Zona de Cobertura
+                            </h2>
+                            <p class="text-xl sm:text-2xl font-medium text-white/90">
+                                Servicio de ayuda a domicilio en
+                                <span class="font-bold underline decoration-white/30 underline-offset-4">
+                                    Córdoba capital
+                                </span>
+                                y toda la
+                                <span class="font-bold underline decoration-white/30 underline-offset-4">
+                                    provincia
+                                </span>
+                            </p>
+                        </div>
+                        <!-- Mapa -->
+                        <div class="grid lg:grid-cols-2 gap-10 items-center">
+                            <!-- MAPA REAL -->
+                            <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-white" role="region" aria-label="Mapa de cobertura en Córdoba y provincia">
+                                <iframe
+                                    title="Mapa de cobertura Auxiplus"
+                                    src="https://www.google.com/maps?q=Córdoba,+España&output=embed"
+                                    class="absolute inset-0 w-full h-full border-0"
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                            </div>
+                            <!-- ZONAS -->
+                            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                                <p class="text-lg font-semibold mb-4">
+                                    Llegamos a donde nos necesites:
+                                </p>
+                                <div class="flex flex-wrap gap-3">
+                                    <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Córdoba Capital</span>
+                                    <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Lucena</span>
+                                    <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Puente Genil</span>
+                                    <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Montilla</span>
+                                    <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Priego de Córdoba</span>
+                                    <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Palma del Río</span>
+                                    <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Cabra</span>
+                                    <span class="px-4 py-2 bg-white/10 rounded-full text-sm italic text-white/70">
+                                        + más municipios
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
             <footer class="bg-white border-t border-gray-200 pt-16 pb-8 dark:bg-[#18171b] dark:border-gray-800" id="contacto">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
