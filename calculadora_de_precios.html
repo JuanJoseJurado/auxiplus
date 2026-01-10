@@ -4,53 +4,13 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <title>Calculadora de Precios - Auxiplus</title>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
-        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-        <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#6B5B95", // Updated to soft violet
-                        "primary-dark": "#56497a", // Darker shade for hovers
-                        "background-light": "#F9F9FB", // Softer light background
-                        "background-dark": "#1F1B2C", // Softer dark background
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
-            },
-        }
-        </script>
-        <style>input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            height: 20px;
-            width: 20px;
-            border-radius: 50%;
-            background: #6B5B95;cursor: pointer;
-            margin-top: -8px;
-            transition: background 0.2s;
-        }
-        input[type=range]::-webkit-slider-thumb:hover {
-            background: #56497a;
-        }
-        input[type=range]::-webkit-slider-runnable-track {
-            width: 100%;
-            height: 4px;
-            cursor: pointer;
-            background: #e5e7eb;
-            border-radius: 2px;
-        }
-        .dark input[type=range]::-webkit-slider-runnable-track {
-            background: #374151;
-        }
-        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/dist/css/output.css">
     </head>
-    <body class="bg-background-light dark:bg-background-dark font-display text-[#2D2A32] dark:text-white">
+    <body class="bg-background-light dark:bg-background-dark font-body text-[#2D2A32] dark:text-white">
         <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
             <header class="sticky top-0 z-50 w-full border-b border-[#f2f2f3] bg-white/95 backdrop-blur-sm dark:bg-[#18171b]/95 dark:border-gray-800">
                 <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
